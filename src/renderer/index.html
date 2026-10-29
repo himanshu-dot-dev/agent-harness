@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!--
+    Content-Security-Policy:
+    - default-src 'self'        → only load resources from this origin
+    - script-src 'self'         → only run scripts from this origin
+    - style-src 'self' 'unsafe-inline' → allow inline styles (remove if using a CSS file)
+  -->
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agent Harness</title>
+  <link rel="stylesheet" href="./styles/main.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="app-header">
+      <h1>⚡ Agent Harness</h1>
+      <p class="subtitle">Electron.js Boilerplate</p>
+    </header>
+
+    <main class="app-main">
+      <section class="card">
+        <h2>Welcome</h2>
+        <p>
+          Your Electron app is running. Edit
+          <code>src/renderer/index.html</code> and
+          <code>src/renderer/scripts/app.js</code> to get started.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Persistent Store Demo</h2>
+        <div class="store-demo">
+          <input id="store-key" type="text" placeholder="Key" />
+          <input id="store-value" type="text" placeholder="Value" />
+          <button id="btn-set">Set</button>
+          <button id="btn-get">Get</button>
+          <p id="store-result" class="store-result"></p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>System Info</h2>
+        <ul id="sys-info"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="./scripts/app.js"></script>
+</body>
+</html>
