@@ -12,17 +12,21 @@
     "build:linux": "electron-builder --linux",
     "lint": "eslint src/**/*.js"
   },
-  "keywords": ["electron", "desktop", "agent"],
+  "keywords": [
+    "electron",
+    "desktop",
+    "agent"
+  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "electron": "^32.0.0",
     "electron-builder": "^25.0.0",
-    "nodemon": "^3.1.0",
-    "eslint": "^9.0.0"
+    "eslint": "^9.0.0",
+    "nodemon": "^3.1.0"
   },
   "dependencies": {
-    "electron-store": "^10.0.0"
+    "electron-store": "^8.2.0"
   },
   "build": {
     "appId": "com.agent-harness.app",
@@ -46,5 +50,8 @@
       "target": "AppImage",
       "icon": "assets/icons/icon.png"
     }
+  },
+  "allowScripts": {
+    "electron@32.3.3": true
   }
 }
